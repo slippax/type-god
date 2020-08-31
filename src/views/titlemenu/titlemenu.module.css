@@ -1,0 +1,76 @@
+.titleborder {
+  border-bottom: 1px solid black;
+  width: 350px;
+  margin: 0px auto;
+  margin-top: -30px;
+}
+
+.chooseborder {
+    border-bottom: 1px solid black;
+    margin: 0px auto;
+    width: 220px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  color: darkslategrey;
+}
+
+.greeting {
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  color: black;
+  margin-bottom: 0px;
+}
+
+.button {
+  position: fixed;
+  top: 8%;
+  right: 5%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.practice {
+  display: inline;
+  margin-right: 10px;
+  border: 2px solid darkslategray;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.practice:hover {
+    background-color: darkslategray;
+    cursor: pointer;
+    color: darkorange;
+}
+
+.challenge {
+  display: inline;
+  margin-left: 10px;
+  border: 2px solid darkslategray;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.challenge:hover {
+    background-color: darkslategray;
+    cursor: pointer;
+    color: darkorange;
+}
+
+.choosing {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
