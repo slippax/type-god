@@ -1,14 +1,14 @@
 import React from "react";
 import classes from "./titlemenu.module.css";
-import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
 const Title = () => {
   return (
-    <Fade top>
+    <Pulse>
       <div className={classes.titlebox}>
         <h1 className={classes.title}>TYPE GOD</h1>
         <div className={classes.titleborder}></div>
       </div>
-    </Fade>
+    </Pulse>
   );
 };
 
