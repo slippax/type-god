@@ -13,6 +13,7 @@
 
 .Current {
   background-color: #09d3ac;
+  border-bottom: 1px solid black;
 }
 
 .Out {
