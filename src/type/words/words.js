@@ -1,12 +1,8 @@
-import React from 'react';
+import faker from "faker";
 
-const Words = () => {
-    return (
-<div>
-    <p>the lazy brown fox jumped over</p>
-    <input></input>
-</div>
-    );
-}
-
-export default Words;
+export const generate = (count = 10) => {
+  return new Array(count)
+    .fill()
+    .map((_) => faker.random.word())
+    .join(" ");
+};

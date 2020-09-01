@@ -1,4 +1,20 @@
 .gameBox {
-    text-align: center;
-    padding-top: 25px;
+    margin: 0px auto;
+  text-align: center;
+  padding-top: 25px;
+  border: 1px solid black;
+  width: 70%;
+  border-radius: 15px;
+}
+
+.Character {
+  white-space: pre;
+}
+
+.Current {
+  background-color: #09d3ac;
+}
+
+.Out {
+  color: silver;
 }
