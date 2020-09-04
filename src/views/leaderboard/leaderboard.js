@@ -1,31 +1,36 @@
 import React, { useState } from "react";
 import Firebase from "firebase";
 import classes from "./leaderboard.module.css";
+import { CgCrown } from "react-icons/cg";
 const Leaderboard = () => {
-  const [completed, setCompleted] = useState(false);
-  let listData = null;
+  const [board, setBoard] = useState(false);
+  let userData = null;
   let ref = Firebase.database().ref("/");
   ref.on("value", (snapshot) => {
-    const userData = snapshot.val();
-    listData = Object.values(userData);
-    console.log(listData);
+    userData = Object.values(snapshot.val()).sort((a, b) => b.wpm - a.wpm);
   });
 
   return (
-    <div className={classes.leaderboard}>
-      <p>Leaderboard</p>
-      <button onClick={() => setCompleted(true)}></button>
-      {completed
-        ? listData.map((el, key) => {
-            return (
-              <ul key={key}>
-                <li>{el.name}</li>
-                <li>{el.accuracy}</li>
-                <li>{el.wpm}</li>
-              </ul>
-            );
-          })
-        : null}
+    <div>
+      <div className={classes.leaderboardheader}>
+        <p>Leaderboard</p>
+        <button className={classes.leadButton} onClick={() => setBoard(!board)}>
+          <CgCrown />
+        </button>
+      </div>
+      <div className={classes.leaderboardBox}>
+        {board
+          ? userData.map((el, key) => {
+              return (
+                <ul className={classes.namebox} key={key}>
+                  <li className={classes.name}>{key+1}. {el.name}</li>
+                  <li className={classes.wpm}>{el.wpm} ({el.accuracy}%)</li>
+                  <li className={classes.accuracy}></li>
+                </ul>
+              );
+            })
+          : null}
+      </div>
     </div>
   );
 };

@@ -8,6 +8,25 @@ import Menu from "../views/titlemenu/menu";
 import Login from "../views/login/login";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseAppAuth = firebaseApp.auth();
+
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider(),
+};
+
+const updateName = () => {
+  let name = {
+    displayName: "",
+  };
+  name.displayName = prompt("Please enter your display name");
+  console.log(name.displayName);
+  if (name.displayName !== null) {
+    firebase.auth().currentUser.updateProfile(name);
+    setTimeout(() => {
+      window.location.reload();
+    }, 200);
+  }
+};
 
 const Auth = (props) => {
   const { user, signOut, signInWithGoogle } = props;
@@ -15,17 +34,18 @@ const Auth = (props) => {
     <div>
       <Title />
       {user ? (
-        <Menu name={user.displayName} signout={signOut} />
+        <div>
+          <Menu
+            name={user.displayName}
+            signout={signOut}
+            editname={() => updateName()}
+          />
+        </div>
       ) : (
         <Login signin={signInWithGoogle} />
       )}
     </div>
   );
-};
-const firebaseAppAuth = firebaseApp.auth();
-
-const providers = {
-  googleProvider: new firebase.auth.GoogleAuthProvider(),
 };
 
 export default withFirebaseAuth({ providers, firebaseAppAuth })(Auth);

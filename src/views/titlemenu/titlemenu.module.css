@@ -6,11 +6,11 @@
 }
 
 .chooseborder {
-    border-bottom: 1px solid black;
-    margin: 0px auto;
-    width: 220px;
-    margin-top: -30px;
-    margin-bottom: 20px;
+  border-bottom: 1px solid black;
+  margin: 0px auto;
+  width: 220px;
+  margin-top: -30px;
+  margin-bottom: 20px;
 }
 
 .title {
@@ -27,7 +27,7 @@
   margin-bottom: 0px;
 }
 
-.button {
+.signoutbutton {
   position: fixed;
   top: 8%;
   right: 5%;
@@ -37,6 +37,15 @@
   font-size: 30px;
 }
 
+.editbutton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.editbuttonbox {
+  text-align: center;
+}
 .actions {
   text-align: center;
 }
@@ -50,9 +59,9 @@
 }
 
 .practice:hover {
-    background-color: darkslategray;
-    cursor: pointer;
-    color: darkorange;
+  background-color: darkslategray;
+  cursor: pointer;
+  color: darkorange;
 }
 
 .challenge {
@@ -64,13 +73,13 @@
 }
 
 .challenge:hover {
-    background-color: darkslategray;
-    cursor: pointer;
-    color: darkorange;
+  background-color: darkslategray;
+  cursor: pointer;
+  color: darkorange;
 }
 
 .choosing {
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 18px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 18px;
 }

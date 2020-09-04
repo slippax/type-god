@@ -1,4 +1,37 @@
-.leaderboard{
-    text-align: center;
-padding-top: 50px;
+.leaderboardheader {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.leadButton {
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.leadButton:hover {
+  color: blueviolet;
+}
+
+.leaderboardBox {
+
+}
+
+.namebox {
+  border: 1px solid black;
+  border-radius: 15px;
+  list-style: none;
+  width: 160px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.name {
+font-weight: bold;
+}
+
+.wpm {
+
 }
