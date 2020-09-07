@@ -25,12 +25,12 @@
   font-size: 45px;
   color: darkslategray;
   margin-bottom: 0px;
-  border-bottom:2px solid darkslategray;
 }
 
 .greetingbox {
   text-align: center;
   padding-top: 10px;
+  border-bottom: 2px solid darkslategray;
 }
 
 .signoutbutton {
@@ -39,18 +39,31 @@
   cursor: pointer;
   font-size: 25px;
   padding-left: 15px;
+  outline:none;
 }
 .signoutbutton:hover {
   color: darkred;
 }
 
+.leaderboardbutton {
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  padding-right: 15px;
+  outline:none;
+}
 
+.leaderboardbutton:hover{
+  color: green;
+}
 .editbutton {
   background: none;
   border: none;
   font-size: 25px;
   cursor: pointer;
   padding-right: 15px;
+  outline:none;
 }
 .editbutton:hover{
   color: green;
@@ -59,7 +72,7 @@
   padding-top: 3px;
   text-align: center;
   
-  width: 200px;
+  width: 300px;
  
   margin: auto;
   margin-top: 15px;
@@ -76,6 +89,7 @@
   padding: 5px;
   font-size: 29px;
   background-color: darkgray;
+  border-radius: 10px;
 }
 
 .practice:hover {
@@ -91,6 +105,7 @@
   padding: 5px;
   font-size: 29px;
   background-color: darkgray;
+  border-radius: 10px;
 }
 
 .challenge:hover {
@@ -108,7 +123,7 @@
 .boxwrapper {
   border: 2px solid darkslategray;
   border-radius: 10px;
-  width: 900px;
+  width: 400px;
   padding-bottom: 25px;
   margin: auto;
   margin-top: 15px;
@@ -117,4 +132,17 @@
 
 .buttontext {
   font-size:12px;
+}
+
+.userbox {
+  border: 2px solid darkslategray;
+  width: 400px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top:20px;
+  background-color: mintcream;
+}
+
+.menu {
+  display: flex;
 }
