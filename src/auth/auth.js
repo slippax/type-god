@@ -6,6 +6,8 @@ import firebaseConfig from "../config/firebaseConfig";
 import Title from "../views/titlemenu/title";
 import Menu from "../views/titlemenu/menu";
 import Login from "../views/login/login";
+import classes from './auth.module.css'
+import Zoom from 'react-reveal/Zoom';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
@@ -20,7 +22,7 @@ const updateName = () => {
   };
   name.displayName = prompt("Please enter your display name");
   console.log(name.displayName);
-  if (name.displayName !== null) {
+  if (name.displayName !== null && name.displayName !== "") {
     firebase.auth().currentUser.updateProfile(name);
     setTimeout(() => {
       window.location.reload();
@@ -31,7 +33,8 @@ const updateName = () => {
 const Auth = (props) => {
   const { user, signOut, signInWithGoogle } = props;
   return (
-    <div>
+    <Zoom>
+    <div className={classes.appwrapper}>
       <Title />
       {user ? (
         <div>
@@ -45,6 +48,7 @@ const Auth = (props) => {
         <Login signin={signInWithGoogle} />
       )}
     </div>
+    </Zoom>
   );
 };
 

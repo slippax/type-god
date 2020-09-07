@@ -11,9 +11,10 @@ const Leaderboard = () => {
   });
 
   return (
-    <div>
+   
+    <div className={classes.leadbox}>
       <div className={classes.leaderboardheader}>
-        <p>Leaderboard</p>
+        <p className={classes.title}>Leaderboard</p>
         <button className={classes.leadButton} onClick={() => setBoard(!board)}>
           <CgCrown />
         </button>
@@ -32,6 +33,7 @@ const Leaderboard = () => {
           : null}
       </div>
     </div>
+   
   );
 };
 

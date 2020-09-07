@@ -1,8 +1,32 @@
 .login {
     text-align: center;
+    border: 2px solid darkslategray;
+    margin: 0px auto;
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: mintcream;
 }
 
 .asktext {
+    color: darkslategray;
+    font-size:30px;
+    border-bottom: 2px solid darkslategray;
+    width: 300px;
+    margin: auto;
+    padding-top: 8px;
+}
+
+.providertext {
     color: darkslateblue;
     font-size: 20px;
+}
+
+.signinimage {
+    cursor: pointer;
+}
+
+.signinimage:hover {
+    background-color: darkslategray;
+
 }

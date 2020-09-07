@@ -106,7 +106,7 @@ const Type = (props) => {
     if (key !== currentChar && !completed && counter > 0) {
       document.getElementById("current").style.backgroundColor = "red";
     } else if (key === currentChar && !completed && counter > 0) {
-      document.getElementById("current").style.backgroundColor = "#09d3ac";
+      document.getElementById("current").style.backgroundColor = "lightgreen";
     }
 
     const updatedTypedChars = typedChars + key;
@@ -133,7 +133,8 @@ const Type = (props) => {
             </span>
             <span>{incomingChars.substr(0, 20)}</span>
           </p>
-          <h3>
+          <div className={classes.infobox}>
+          <h3 className={classes.typeinfo}>
             {wpm === 0 ? (
               <div>WPM: -- | ACC: {accuracy}%</div>
             ) : (
@@ -142,14 +143,15 @@ const Type = (props) => {
               </div>
             )}
           </h3>
-          <h4>Countdown: {counter}</h4>
+          <h4 className={classes.typeinfo}>Countdown: {counter}</h4>
           <button className={classes.cancelButton} onClick={props.clicked}>
             <GiCancel />
           </button>
+          </div>
         </div>
       ) : (
         <div className={classes.gameBox}>
-          <h3>
+          <h3 className={classes.typeinfo}>
             Finished. WPM of {wpm}. Accuracy of {accuracy}
           </h3>
           <button className={classes.finishButton} onClick={props.clicked}>

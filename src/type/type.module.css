@@ -2,34 +2,45 @@
   margin: 0px auto;
   text-align: center;
   padding-top: 25px;
-  border: 1px solid black;
-  width: 70%;
+  border: 2px solid darkslategray;
+  width: 850px;
   border-radius: 15px;
+  margin-top: 20px;
+  background-color: #dfdfdf;
 }
 
 .cancelButton {
   border: none;
   background: none;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
 }
 
 .finishButton {
   border: none;
   background: none;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
 }
 
 .Character {
   white-space: pre;
+  font-size: 36px;
 }
 
 .Current {
-  background-color: #09d3ac;
+  background-color: lightgreen;
   border-bottom: 1px solid black;
 }
 
 .Out {
-  color: silver;
+  color: linen;
+}
+
+.typeinfo {
+  font-size: 20px;
+}
+
+.infobox {
+  border-top: 2px solid darkslategray;
 }

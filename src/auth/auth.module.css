@@ -1,0 +1,9 @@
+.appwrapper {
+    border: 2px solid darkslategray;
+    border-radius: 10px;
+    width: 1000px;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding-bottom: 90px;
+    background-color: #dfdfdf;
+}

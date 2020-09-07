@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./titlemenu.module.css";
 import { BiLogOut } from "react-icons/bi";
-import { FaUserEdit } from 'react-icons/fa';
+import { FaUserEdit } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
 import Typist from "react-typist";
@@ -11,19 +11,25 @@ const Menu = (props) => {
   const [challenge, setChallenge] = useState(false);
   return (
     <div>
-      <button className={classes.signoutbutton} onClick={props.signout}>
-        <BiLogOut />
-      </button>
+      
+        <div className={classes.greetingbox}>
       <Typist>
-        <p className={classes.greeting}>Hello {props.name}</p>
+        <span className={classes.greeting}>Hello {props.name}</span>
       </Typist>
-      <Fade top>
-      <div className={classes.editbuttonbox}>
-      <button className={classes.editbutton} onClick={props.editname}><FaUserEdit/></button>
       </div>
-      </Fade>
-      {!challenge ? (
+      <div className={classes.buttonbox}>
+          <button className={classes.editbutton} onClick={props.editname}>
+            <FaUserEdit /><div className={classes.buttontext}>Edit Name</div> 
+          </button>
+          <button className={classes.signoutbutton} onClick={props.signout}>
+            <BiLogOut /><div className={classes.buttontext}>Sign-out</div>
+          </button>
+        </div>
         <Fade top>
+      <div className={classes.boxwrapper}>
+      
+      {!challenge ? (
+        
           <div>
             <p className={classes.choosing}>Challenge or Practice?</p>
 
@@ -38,14 +44,17 @@ const Menu = (props) => {
               <p className={classes.challenge}>Practice</p>
             </div>
           </div>
-        </Fade>
+        
       ) : (
         <div></div>
       )}
       <Pulse spy={challenge}>
         {challenge ? <Type clicked={() => setChallenge(false)} /> : <div></div>}
       </Pulse>
+      </div>
+      
       <Leaderboard />
+      </Fade>
     </div>
   );
 };

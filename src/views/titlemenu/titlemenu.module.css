@@ -1,50 +1,69 @@
 .titleborder {
-  border-bottom: 1px solid black;
-  width: 350px;
+  border-bottom: 2px solid black;
+  width: 500px;
   margin: 0px auto;
-  margin-top: -30px;
+  margin-top: -60px;
 }
 
 .chooseborder {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid darkslategray;
   margin: 0px auto;
-  width: 220px;
+  width: 380px;
   margin-top: -30px;
   margin-bottom: 20px;
 }
 
 .title {
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
   color: darkslategrey;
 }
 
 .greeting {
   text-align: center;
   font-weight: 400;
-  font-size: 25px;
-  color: black;
+  font-size: 45px;
+  color: darkslategray;
   margin-bottom: 0px;
+  border-bottom:2px solid darkslategray;
+}
+
+.greetingbox {
+  text-align: center;
+  padding-top: 10px;
 }
 
 .signoutbutton {
-  position: fixed;
-  top: 8%;
-  right: 5%;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 25px;
+  padding-left: 15px;
 }
+.signoutbutton:hover {
+  color: darkred;
+}
+
 
 .editbutton {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
+  padding-right: 15px;
 }
-.editbuttonbox {
+.editbutton:hover{
+  color: green;
+}
+.buttonbox {
+  padding-top: 3px;
   text-align: center;
+  
+  width: 200px;
+ 
+  margin: auto;
+  margin-top: 15px;
+
 }
 .actions {
   text-align: center;
@@ -55,7 +74,8 @@
   margin-right: 10px;
   border: 2px solid darkslategray;
   padding: 5px;
-  font-size: 20px;
+  font-size: 29px;
+  background-color: darkgray;
 }
 
 .practice:hover {
@@ -69,7 +89,8 @@
   margin-left: 10px;
   border: 2px solid darkslategray;
   padding: 5px;
-  font-size: 20px;
+  font-size: 29px;
+  background-color: darkgray;
 }
 
 .challenge:hover {
@@ -80,6 +101,20 @@
 
 .choosing {
   text-align: center;
-  padding-bottom: 20px;
-  font-size: 18px;
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+.boxwrapper {
+  border: 2px solid darkslategray;
+  border-radius: 10px;
+  width: 900px;
+  padding-bottom: 25px;
+  margin: auto;
+  margin-top: 15px;
+  background-color: mintcream;
+}
+
+.buttontext {
+  font-size:12px;
 }
