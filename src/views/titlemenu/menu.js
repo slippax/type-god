@@ -18,7 +18,7 @@ const Menu = (props) => {
             <div className={classes.userbox}>
               <div className={classes.greetingbox}>
                 <Typist>
-                  <span className={classes.greeting}>Hello {props.name}</span>
+                  <span className={classes.greeting}>Hello <span id='name'>{props.name}</span></span>
                 </Typist>
               </div>
               <div className={classes.buttonbox}>

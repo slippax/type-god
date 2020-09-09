@@ -1,22 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Firebase from "firebase";
 import classes from "./leaderboard.module.css";
 import Zoom from "react-reveal/Zoom";
 const Leaderboard = () => {
   const [board, setBoard] = useState(false);
   let userData = null;
-  let ref = Firebase.database().ref("/");
-  ref.on("value", (snapshot) => {
-    userData = Object.values(snapshot.val()).sort((a, b) => b.wpm - a.wpm);
-  });
-useEffect(() => {
-  setTimeout(() => {
-    if (userData!==null) {
-      setBoard(true);
-    }
-  }, 500);
 
-}, [userData])
+ function getLeaderboard() {
+    return new Promise((resolve, reject) => {
+      let ref = Firebase.database().ref("/");
+      if (ref !== null) {
+        ref.on("value", (snapshot) => {
+          userData = Object.values(snapshot.val()).sort(
+            (a, b) => b.wpm - a.wpm
+          );
+          resolve("leaderboard completed");
+        });
+      } else {
+        reject("leaderboard not compeleted");
+      }
+    });
+  }
+  async function showLeaderboard () {
+    await getLeaderboard().then(response =>{
+      console.log(response);
+      setBoard(true);
+    })
+  }
+
+  showLeaderboard();
+  
+
   return (
     <div className={classes.leadbox}>
       <div className={classes.leaderboardheader}>
