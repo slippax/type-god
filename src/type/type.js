@@ -134,19 +134,19 @@ const Type = (props) => {
             <span>{incomingChars.substr(0, 20)}</span>
           </p>
           <div className={classes.infobox}>
-          <h3 className={classes.typeinfo}>
-            {wpm === 0 ? (
-              <div>WPM: -- | ACC: {accuracy}%</div>
-            ) : (
-              <div>
-                WPM: {wpm} | ACC: {accuracy}%
-              </div>
-            )}
-          </h3>
-          <h4 className={classes.typeinfo}>Countdown: {counter}</h4>
-          <button className={classes.cancelButton} onClick={props.clicked}>
-            <GiCancel />
-          </button>
+            <h3 className={classes.typeinfo}>
+              {wpm === 0 ? (
+                <div>WPM: -- | ACC: {accuracy}%</div>
+              ) : (
+                <div>
+                  WPM: {wpm} | ACC: {accuracy}%
+                </div>
+              )}
+            </h3>
+            <h4 className={classes.typeinfo}>Countdown: {counter}</h4>
+            <button className={classes.cancelButton} onClick={props.clicked}>
+              <GiCancel />
+            </button>
           </div>
         </div>
       ) : (

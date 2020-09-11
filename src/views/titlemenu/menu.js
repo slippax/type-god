@@ -4,6 +4,7 @@ import { BiLogOut } from "react-icons/bi";
 import { FaUserEdit } from "react-icons/fa";
 import { GrAchievement } from "react-icons/gr";
 import LightSpeed from "react-reveal/Zoom";
+import Fade from 'react-reveal/Fade';
 import Typist from "react-typist";
 import Type from "../../type/type";
 import Leaderboard from "../leaderboard/leaderboard";
@@ -11,7 +12,8 @@ const Menu = (props) => {
   const [challenge, setChallenge] = useState(false);
   const [leaderboard, showLeaderboard] = useState(true);
   return (
-    <LightSpeed>
+<div>
+  <Fade right>
       <LightSpeed opposite when={!challenge}>
         {!challenge ? (
           <div>
@@ -71,7 +73,8 @@ const Menu = (props) => {
       <LightSpeed opposite when={challenge}>
         {challenge ? <Type clicked={() => setChallenge(false)} /> : <div></div>}
       </LightSpeed>
-    </LightSpeed>
+      </Fade>
+      </div>
   );
 };
 

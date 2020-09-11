@@ -40,7 +40,7 @@ async function showName() {
 const Auth = (props) => {
   const { user, signOut, signInWithGoogle } = props;
   return (
-    <Zoom>
+   
       <div className={classes.appwrapper}>
         <Title />
         {user ? (
@@ -55,7 +55,7 @@ const Auth = (props) => {
           <Login signin={signInWithGoogle} />
         )}
       </div>
-    </Zoom>
+   
   );
 };
 

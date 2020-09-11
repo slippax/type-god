@@ -11,6 +11,7 @@
   width: 380px;
   margin-top: -30px;
   margin-bottom: 20px;
+  
 }
 
 .title {
@@ -25,6 +26,7 @@
   font-size: 45px;
   color: darkslategray;
   margin-bottom: 0px;
+  
 }
 
 .greetingbox {
@@ -106,6 +108,7 @@
   font-size: 29px;
   background-color: darkgray;
   border-radius: 10px;
+  
 }
 
 .challenge:hover {
@@ -126,8 +129,17 @@
   width: 400px;
   padding-bottom: 25px;
   margin: auto;
-  margin-top: 15px;
+  margin-top: 25px;
   background-color: mintcream;
+  -webkit-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+  -moz-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+  box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+}
+
+.boxwrapper:hover{
+  -webkit-box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
+  -moz-box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
+  box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
 }
 
 .buttontext {
@@ -141,6 +153,15 @@
   margin: auto;
   margin-top:20px;
   background-color: mintcream;
+  -webkit-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+  -moz-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+  box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+}
+
+.userbox:hover{
+  -webkit-box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
+  -moz-box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
+  box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
 }
 
 .menu {
