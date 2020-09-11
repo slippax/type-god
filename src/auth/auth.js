@@ -7,7 +7,6 @@ import Title from "../views/titlemenu/title";
 import Menu from "../views/titlemenu/menu";
 import Login from "../views/login/login";
 import classes from "./auth.module.css";
-import Zoom from "react-reveal/Zoom";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();

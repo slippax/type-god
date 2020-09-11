@@ -53,3 +53,7 @@
 .infobox {
   border-top: 2px solid darkslategray;
 }
+
+.description {
+  color: darkslategray;
+}

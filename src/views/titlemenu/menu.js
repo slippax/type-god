@@ -55,7 +55,9 @@ const Menu = (props) => {
                 >
                   Challenge
                 </p>
-                <p className={classes.challenge}>Practice</p>
+                
+                <p className={classes.challenge}
+                onClick={() => alert('Practice mode is currently under construction')}>Practice</p>
               </div>
             </div>
             <LightSpeed opposite when={leaderboard}>

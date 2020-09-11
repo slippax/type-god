@@ -144,6 +144,9 @@ const Type = (props) => {
               )}
             </h3>
             <h4 className={classes.typeinfo}>Countdown: {counter}</h4>
+            {!startTime ? (
+            <h4 className={classes.description}>Timer will start when you begin typing.</h4>
+          ) : (<div></div>)}
             <button className={classes.cancelButton} onClick={props.clicked}>
               <GiCancel />
             </button>
