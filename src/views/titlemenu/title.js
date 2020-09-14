@@ -5,7 +5,7 @@ const Title = () => {
   return (
     <Pulse>
       <div className={classes.titlebox}>
-        <h1 className={classes.title}>TYPE GOD</h1>
+        <h1 className={classes.title}>TYPE KING</h1>
         <div className={classes.titleborder}></div>
       </div>
     </Pulse>

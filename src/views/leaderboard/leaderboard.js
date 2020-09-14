@@ -20,6 +20,7 @@ const Leaderboard = () => {
         reject("leaderboard not compeleted");
       }
     });
+    
   }
   async function showLeaderboard () {
     await getLeaderboard().then(response =>{
