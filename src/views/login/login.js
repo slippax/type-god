@@ -5,7 +5,7 @@ import Flip from 'react-reveal/Fade';
 import Leaderboard from '../leaderboard/leaderboard';
 const Login = (props) => {
     return (
-        <Flip top>
+        <Flip left>
         <div className={classes.login}>
             <p className={classes.asktext}>Please sign in</p>
             <p className={classes.providertext}>More login providers and anonymous login coming soon.</p>

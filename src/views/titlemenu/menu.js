@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import classes from "./titlemenu.module.css";
-import { BiLogOut } from "react-icons/bi";
-import { FaUserEdit } from "react-icons/fa";
-import { GrAchievement } from "react-icons/gr";
+import { FiLogOut, FiEdit, FiAward } from "react-icons/fi";
 import LightSpeed from "react-reveal/Zoom";
+import Fade from 'react-reveal/Fade';
 import Typist from "react-typist";
 import Type from "../../type/type";
 import Leaderboard from "../leaderboard/leaderboard";
@@ -11,7 +10,8 @@ const Menu = (props) => {
   const [challenge, setChallenge] = useState(false);
   const [leaderboard, showLeaderboard] = useState(true);
   return (
-    <LightSpeed>
+<div>
+  <Fade right>
       <LightSpeed opposite when={!challenge}>
         {!challenge ? (
           <div>
@@ -23,21 +23,21 @@ const Menu = (props) => {
               </div>
               <div className={classes.buttonbox}>
                 <button className={classes.editbutton} onClick={props.editname}>
-                  <FaUserEdit />
+                  <FiEdit/>
                   <div className={classes.buttontext}>Edit Name</div>
                 </button>
                 <button
                   className={classes.leaderboardbutton}
                   onClick={() => showLeaderboard(!leaderboard)}
                 >
-                  <GrAchievement />
+                  <FiAward/>
                   <div className={classes.buttontext}>Toggle Leaderboard</div>
                 </button>
                 <button
                   className={classes.signoutbutton}
                   onClick={props.signout}
                 >
-                  <BiLogOut />
+                  <FiLogOut/>
                   <div className={classes.buttontext}>Sign-out</div>
                 </button>
               </div>
@@ -53,7 +53,9 @@ const Menu = (props) => {
                 >
                   Challenge
                 </p>
-                <p className={classes.challenge}>Practice</p>
+                
+                <p className={classes.challenge}
+                onClick={() => alert('Practice mode is currently under construction')}>Practice</p>
               </div>
             </div>
             <LightSpeed opposite when={leaderboard}>
@@ -71,7 +73,8 @@ const Menu = (props) => {
       <LightSpeed opposite when={challenge}>
         {challenge ? <Type clicked={() => setChallenge(false)} /> : <div></div>}
       </LightSpeed>
-    </LightSpeed>
+      </Fade>
+      </div>
   );
 };
 

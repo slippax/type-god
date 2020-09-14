@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { generate } from "./words/words";
 import { currentTime } from "./time/time";
-import { GiCancel } from "react-icons/gi";
-import { GrSave } from "react-icons/gr";
+import { FiXCircle, FiSave } from "react-icons/fi";
 import classes from "./type.module.css";
 import TypeHook from "./typehook/typehook";
 import Firebase from "firebase";
@@ -124,6 +123,7 @@ const Type = (props) => {
     <div>
       {!completed ? (
         <div className={classes.gameBox}>
+          <div className={classes.typeBox}>
           <p className={classes.Character}>
             <span className={classes.Out}>
               {(leftPadding + outgoingChars).slice(-20)}
@@ -133,20 +133,24 @@ const Type = (props) => {
             </span>
             <span>{incomingChars.substr(0, 20)}</span>
           </p>
+          </div>
           <div className={classes.infobox}>
-          <h3 className={classes.typeinfo}>
-            {wpm === 0 ? (
-              <div>WPM: -- | ACC: {accuracy}%</div>
-            ) : (
-              <div>
-                WPM: {wpm} | ACC: {accuracy}%
-              </div>
-            )}
-          </h3>
-          <h4 className={classes.typeinfo}>Countdown: {counter}</h4>
-          <button className={classes.cancelButton} onClick={props.clicked}>
-            <GiCancel />
-          </button>
+            <h3 className={classes.typeinfo}>
+              {wpm === 0 ? (
+                <div>WPM: -- | ACC: {accuracy}%</div>
+              ) : (
+                <div>
+                  WPM: {wpm} | ACC: {accuracy}%
+                </div>
+              )}
+            </h3>
+            <h4 className={classes.typeinfo}>Countdown: {counter}</h4>
+            {!startTime ? (
+            <h4 className={classes.description}>Timer will start when you begin typing.</h4>
+          ) : (<div></div>)}
+            <button className={classes.cancelButton} onClick={props.clicked}>
+              <FiXCircle/>
+            </button>
           </div>
         </div>
       ) : (
@@ -155,7 +159,7 @@ const Type = (props) => {
             Finished. WPM of {wpm}. Accuracy of {accuracy}
           </h3>
           <button className={classes.finishButton} onClick={props.clicked}>
-            <GrSave />
+            <FiSave/>
           </button>
         </div>
       )}
