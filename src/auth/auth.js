@@ -6,7 +6,7 @@ import firebaseConfig from "../config/firebaseConfig";
 import Title from "../views/titlemenu/title";
 import Menu from "../views/titlemenu/menu";
 import Login from "../views/login/login";
-import classes from "./auth.module.css";
+
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
@@ -40,7 +40,7 @@ const Auth = (props) => {
   const { user, signOut, signInWithGoogle } = props;
   return (
    
-      <div className={classes.appwrapper}>
+      <div>
         <Title />
         {user ? (
           <div>

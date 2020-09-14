@@ -8,7 +8,7 @@
 .chooseborder {
   border-bottom: 2px solid darkslategray;
   margin: 0px auto;
-  width: 380px;
+  width: 400px;
   margin-top: -30px;
   margin-bottom: 20px;
   
@@ -57,7 +57,7 @@
 }
 
 .leaderboardbutton:hover{
-  color: green;
+  color: darkcyan;
 }
 .editbutton {
   background: none;
@@ -121,6 +121,8 @@
   text-align: center;
   padding-bottom: 5px;
   font-size: 30px;
+  color: darkslategray;
+  margin-top: 15px;
 }
 
 .boxwrapper {
@@ -129,7 +131,7 @@
   width: 400px;
   padding-bottom: 25px;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 30px;
   background-color: mintcream;
   -webkit-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
   -moz-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);

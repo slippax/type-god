@@ -4,7 +4,7 @@
   border-bottom: 2px solid darkslategray;
   margin: 0px auto;
   padding-top: 8px;
-
+  padding-bottom: 8px;
   margin-bottom:8px;
 }
 
@@ -28,33 +28,19 @@
 .leaderboardheader {
   text-align: center;
   margin: 0px auto;
-  width: 300px;
-}
-
-.leadButton {
-  border: none;
-  background: none;
-  font-size: 30px;
-  cursor: pointer;
-  outline: none;
-}
-
-.leadButton:hover {
-  color: blueviolet;
-}
-
-.leaderboardBox {
-
+  width: 400px;
+  padding-bottom: 5px;
 }
 
 .namebox {
   border: 2px solid black;
   border-radius: 10px;
   list-style: none;
-  width: 160px;
+  width: 170px;
   margin: 0px auto;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   background-color: lavender;
+  padding-left: 10px;
 }
 
 .name {
@@ -64,6 +50,6 @@ font-size: 20px;
 }
 
 .wpm {
-color: red;
+color: firebrick;
 font-weight: bold;
 }

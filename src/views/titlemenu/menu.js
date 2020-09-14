@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import classes from "./titlemenu.module.css";
-import { BiLogOut } from "react-icons/bi";
-import { FaUserEdit } from "react-icons/fa";
-import { GrAchievement } from "react-icons/gr";
+import { FiLogOut, FiEdit, FiAward } from "react-icons/fi";
 import LightSpeed from "react-reveal/Zoom";
 import Fade from 'react-reveal/Fade';
 import Typist from "react-typist";
@@ -25,21 +23,21 @@ const Menu = (props) => {
               </div>
               <div className={classes.buttonbox}>
                 <button className={classes.editbutton} onClick={props.editname}>
-                  <FaUserEdit />
+                  <FiEdit/>
                   <div className={classes.buttontext}>Edit Name</div>
                 </button>
                 <button
                   className={classes.leaderboardbutton}
                   onClick={() => showLeaderboard(!leaderboard)}
                 >
-                  <GrAchievement />
+                  <FiAward/>
                   <div className={classes.buttontext}>Toggle Leaderboard</div>
                 </button>
                 <button
                   className={classes.signoutbutton}
                   onClick={props.signout}
                 >
-                  <BiLogOut />
+                  <FiLogOut/>
                   <div className={classes.buttontext}>Sign-out</div>
                 </button>
               </div>

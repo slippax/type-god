@@ -21,13 +21,14 @@
     color: darkslategray;
     font-size:30px;
     border-bottom: 2px solid darkslategray;
-    width: 300px;
+    width: 400px;
     margin: auto;
     padding-top: 8px;
+    padding-bottom: 5px;
 }
 
 .providertext {
-    color: darkslateblue;
+    color: darkblue;
     font-size: 20px;
 }
 
@@ -37,5 +38,4 @@
 
 .signinimage:hover {
     background-color: darkslategray;
-
 }

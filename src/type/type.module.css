@@ -23,6 +23,11 @@
   background: none;
   font-size: 30px;
   cursor: pointer;
+  outline: none;
+}
+
+.cancelButton:hover{
+  color: firebrick;
 }
 
 .finishButton {
@@ -30,6 +35,11 @@
   background: none;
   font-size: 30px;
   cursor: pointer;
+  outline: none;
+}
+
+.finishButton:hover{
+  color: lightgreen;
 }
 
 .Character {
@@ -56,4 +66,8 @@
 
 .description {
   color: darkslategray;
+}
+
+.typeBox {
+  
 }
