@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Firebase from "firebase";
 import classes from "./leaderboard.module.css";
 import Zoom from "react-reveal/Zoom";
+
 const Leaderboard = () => {
   const [board, setBoard] = useState(false);
   let userData = null;
 
- function getLeaderboard() {
+  function getLeaderboard() {
     return new Promise((resolve, reject) => {
       let ref = Firebase.database().ref("/");
       if (ref !== null) {
@@ -14,23 +15,21 @@ const Leaderboard = () => {
           userData = Object.values(snapshot.val()).sort(
             (a, b) => b.wpm - a.wpm
           );
-          resolve("leaderboard completed");
+          resolve("leaderboard fetched");
         });
       } else {
-        reject("leaderboard not compeleted");
+        reject("leaderboard not fetched");
       }
-    });
-    
-  }
-  async function showLeaderboard () {
-    await getLeaderboard().then(response =>{
-      console.log(response);
-      setBoard(true);
     })
+      .then(() => {
+        setBoard(true);
+      })
+      .catch((value) => {
+        console.log(value);
+      });
   }
 
-  showLeaderboard();
-  
+  getLeaderboard();
 
   return (
     <div className={classes.leadbox}>

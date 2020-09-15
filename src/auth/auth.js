@@ -7,7 +7,6 @@ import Title from "../views/titlemenu/title";
 import Menu from "../views/titlemenu/menu";
 import Login from "../views/login/login";
 
-
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
 
@@ -26,12 +25,7 @@ function setName() {
     } else {
       reject("name not completed");
     }
-  });
-}
-
-async function showName() {
-  await setName().then((response) => {
-    console.log(response);
+  }).then(() => {
     document.getElementById("name").innerHTML = name.displayName;
   });
 }
@@ -39,22 +33,20 @@ async function showName() {
 const Auth = (props) => {
   const { user, signOut, signInWithGoogle } = props;
   return (
-   
-      <div>
-        <Title />
-        {user ? (
-          <div>
-            <Menu
-              name={user.displayName}
-              signout={signOut}
-              editname={() => showName()}
-            />
-          </div>
-        ) : (
-          <Login signin={signInWithGoogle} />
-        )}
-      </div>
-   
+    <div>
+      <Title />
+      {user ? (
+        <div>
+          <Menu
+            name={user.displayName}
+            signout={signOut}
+            editname={() => setName()}
+          />
+        </div>
+      ) : (
+        <Login signin={signInWithGoogle} />
+      )}
+    </div>
   );
 };
 
