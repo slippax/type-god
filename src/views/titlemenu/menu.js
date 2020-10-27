@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classes from "./titlemenu.module.css";
 import { FiLogOut, FiEdit, FiAward } from "react-icons/fi";
 import LightSpeed from "react-reveal/Zoom";
-import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Slide';
 import Typist from "react-typist";
 import Type from "../../type/type";
 import Leaderboard from "../leaderboard/leaderboard";
@@ -11,7 +11,7 @@ const Menu = (props) => {
   const [leaderboard, showLeaderboard] = useState(true);
   return (
 <div>
-  <Fade right>
+  <Flip top>
       <LightSpeed opposite when={!challenge}>
         {!challenge ? (
           <div>
@@ -73,7 +73,7 @@ const Menu = (props) => {
       <LightSpeed opposite when={challenge}>
         {challenge ? <Type clicked={() => setChallenge(false)} /> : <div></div>}
       </LightSpeed>
-      </Fade>
+      </Flip>
       </div>
   );
 };

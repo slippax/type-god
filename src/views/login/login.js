@@ -1,11 +1,11 @@
 import React from 'react'
 import classes from './login.module.css';
 import signinicon from '../../assets/login/googlesignin.png';
-import Flip from 'react-reveal/Fade';
+import Flip from 'react-reveal/Slide';
 import Leaderboard from '../leaderboard/leaderboard';
 const Login = (props) => {
     return (
-        <Flip left>
+        <Flip top>
         <div className={classes.login}>
             <p className={classes.asktext}>Please sign in</p>
             <p className={classes.providertext}>More login providers and anonymous login coming soon.</p>
