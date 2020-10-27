@@ -1,0 +1,10 @@
+.appWrapper {
+
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(52,94,138,1);
+}

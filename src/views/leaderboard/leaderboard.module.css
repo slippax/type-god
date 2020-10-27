@@ -13,7 +13,7 @@
   border: 2px solid darkslategray;
   border-radius: 10px;
   margin-top: 30px;
-  width: 400px;
+  width: 700px;
   background-color: mintcream;
   -webkit-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
   -moz-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
@@ -28,7 +28,7 @@
 .leaderboardheader {
   text-align: center;
   margin: 0px auto;
-  width: 400px;
+  width: 700px;
   padding-bottom: 5px;
 }
 
@@ -36,7 +36,7 @@
   border: 2px solid black;
   border-radius: 10px;
   list-style: none;
-  width: 170px;
+  width: 420px;
   margin: 0px auto;
   margin-bottom: 8px;
   background-color: lavender;

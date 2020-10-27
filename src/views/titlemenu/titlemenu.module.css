@@ -1,14 +1,28 @@
 .titleborder {
-  border-bottom: 2px solid black;
   width: 500px;
   margin: 0px auto;
-  margin-top: -60px;
 }
 
+.titlebox {
+  border: 2px solid darkslategray;
+  width: 700px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: mintcream;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+  -moz-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+  box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+}
+.titlebox:hover{
+  -webkit-box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
+  -moz-box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
+  box-shadow: 0px 0px 29px 5px rgba(52,94,138,1);
+}
 .chooseborder {
   border-bottom: 2px solid darkslategray;
   margin: 0px auto;
-  width: 400px;
+  width: 700px;
   margin-top: -30px;
   margin-bottom: 20px;
   
@@ -16,8 +30,10 @@
 
 .title {
   text-align: center;
-  font-size: 80px;
+  font-size: 50px;
   color: darkslategrey;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .greeting {
@@ -74,7 +90,7 @@
   padding-top: 3px;
   text-align: center;
   
-  width: 300px;
+  width: 400px;
  
   margin: auto;
   margin-top: 15px;
@@ -128,7 +144,7 @@
 .boxwrapper {
   border: 2px solid darkslategray;
   border-radius: 10px;
-  width: 400px;
+  width: 700px;
   padding-bottom: 25px;
   margin: auto;
   margin-top: 30px;
@@ -150,7 +166,7 @@
 
 .userbox {
   border: 2px solid darkslategray;
-  width: 400px;
+  width: 700px;
   border-radius: 10px;
   margin: auto;
   margin-top:20px;

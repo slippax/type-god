@@ -5,7 +5,7 @@ const Title = () => {
   return (
     <Pulse cascade>
       <div className={classes.titlebox}>
-        <h1 className={classes.title}>TYPE KING</h1>
+        <h3 className={classes.title}>TYPE KING</h3>
         <div className={classes.titleborder}></div>
       </div>
     </Pulse>
