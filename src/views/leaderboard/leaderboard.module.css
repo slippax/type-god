@@ -2,7 +2,7 @@
   font-size: 30px;
   color: darkslategray;
   border-bottom: 2px solid darkslategray;
-  margin: 0px auto;
+  margin: auto;
   padding-top: 8px;
   padding-bottom: 8px;
   margin-bottom:8px;
@@ -13,11 +13,12 @@
   border: 2px solid darkslategray;
   border-radius: 10px;
   margin-top: 30px;
-  width: 700px;
+  width: 460px;
   background-color: mintcream;
   -webkit-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
   -moz-box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
   box-shadow: 1px 1px 15px 1px rgba(52,94,138,1);
+  padding-bottom: 5px;
 }
 
 .leadbox:hover {
@@ -28,7 +29,7 @@
 .leaderboardheader {
   text-align: center;
   margin: 0px auto;
-  width: 700px;
+  width: 460px;
   padding-bottom: 5px;
 }
 
@@ -42,7 +43,9 @@
   background-color: lavender;
   padding-left: 10px;
 }
-
+.namebox:hover{
+  background-color: rgb(214, 235, 195);
+}
 .name {
 font-weight: bold;
 color: darkslategray;

@@ -5,7 +5,7 @@
 
 .titlebox {
   border: 2px solid darkslategray;
-  width: 700px;
+  width: 330px;
   margin: auto;
   margin-top: 10px;
   background-color: mintcream;
@@ -22,7 +22,7 @@
 .chooseborder {
   border-bottom: 2px solid darkslategray;
   margin: 0px auto;
-  width: 700px;
+  width: 450px;
   margin-top: -30px;
   margin-bottom: 20px;
   
@@ -144,7 +144,7 @@
 .boxwrapper {
   border: 2px solid darkslategray;
   border-radius: 10px;
-  width: 700px;
+  width: 450px;
   padding-bottom: 25px;
   margin: auto;
   margin-top: 30px;
@@ -166,7 +166,7 @@
 
 .userbox {
   border: 2px solid darkslategray;
-  width: 700px;
+  width: 400px;
   border-radius: 10px;
   margin: auto;
   margin-top:20px;
@@ -184,4 +184,8 @@
 
 .menu {
   display: flex;
+}
+
+.menuwrap{
+ 
 }

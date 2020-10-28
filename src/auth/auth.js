@@ -36,6 +36,7 @@ const Auth = (props) => {
   return (
     <div className={classes.appWrapper}>
       <Title />
+      <div className={classes.uiwrapper}>
       {user ? (
         <div>
           <Menu
@@ -47,6 +48,7 @@ const Auth = (props) => {
       ) : (
         <Login signin={signInWithGoogle} />
       )}
+      </div>
     </div>
   );
 };

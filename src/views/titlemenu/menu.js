@@ -10,7 +10,7 @@ const Menu = (props) => {
   const [challenge, setChallenge] = useState(false);
   const [leaderboard, showLeaderboard] = useState(true);
   return (
-<div>
+<div className={classes.menuwrap}>
   <Flip top>
       <LightSpeed opposite when={!challenge}>
         {!challenge ? (

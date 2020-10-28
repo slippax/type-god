@@ -8,7 +8,7 @@ const Login = (props) => {
         <Flip top>
         <div className={classes.login}>
             <p className={classes.asktext}>Please sign in</p>
-            <p className={classes.providertext}>More login providers and anonymous login coming soon.</p>
+            <p className={classes.providertext}>Guest login & others coming soon.</p>
             <img className={classes.signinimage} onClick={props.signin} src={signinicon} alt={'signin'}></img>
             </div>
             <Leaderboard/>
